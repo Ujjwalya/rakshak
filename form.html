@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Instructions for using the Edinburgh Postnatal Depression Scale:</h1>
+<ol><li>The mother is asked to check the response that comes closest to how she has been feeling
+    in the previous 7 days. </li>
+<li>All the items must be completed. </li>
+<li>Care should be taken to avoid the possibility of the mother discussing her answers with
+    others. (Answers come from the mother or pregnant woman.) 
+    </li>
+<li>The mother should complete the scale herself, unless she has limited English or has difficulty
+    with reading. </li></ol>
+<form>
+
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="95%" id="AutoNumber1">
+      <tr>
+        <td width="59%"><b><font face="arial">1. I have been able to laugh and see the funny side of 
+        things </font></b><font face="arial"> 
+        <br>  <input type="radio" value="0" name="one" onclick="calculatescore(this.form)">
+        As much as I always could <br>
+        <input type="radio"  value="1" name="one" onclick="calculatescore(this.form)">
+        Not quite so much now <br>
+         <input type="radio"  value="2" name="one" onclick="calculatescore(this.form)">
+        Definitely not so much now <br>
+         <input type="radio"  value="3" name="one" onclick="calculatescore(this.form)">
+        Not at all<br>
+    &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59%"><font face="arial"><b>2. I have looked forward with enjoyment to things</b><br>
+        <input type="radio" value="0" name="two" onclick="calculatescore(this.form)">
+        
+        As much 
+        as I ever did <br>
+            <input type="radio" value="1" name="two" onclick="calculatescore(this.form)">
+        Rather less than I used to <br>
+            <input type="radio" value="2" name="two" onclick="calculatescore(this.form)">
+        Definitely less than I used to <br>
+            <input type="radio" value="3" name="two" onclick="calculatescore(this.form)">
+        Hardly at all <br>
+    &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59%"><font face="arial"><b>3. I have blamed myself unnecessarily when things&nbsp;
+        went wrong </b> 
+        
+        <br><input type="radio" value="3" name="three" onclick="calculatescore(this.form)">
+        Yes, most of the time <br>
+        <input type="radio" value="2" name="three" onclick="calculatescore(this.form)">
+        Yes, some of the time <br>
+        <input type="radio" value="1" name="three" onclick="calculatescore(this.form)">
+        Not very often <br>
+        <input type="radio" value="0" name="three" onclick="calculatescore(this.form)">
+        No, never<br>
+    &nbsp;<p>
+        </td>
+      </tr>
+      <tr>
+        <td width="59%"><font face="arial"><b>4. I have been anxious or worried for no good reason</b><br>
+        <input type="radio" value="0" name="four" onclick="calculatescore(this.form)">
+        No, not at all <br>
+        <input type="radio" value="1" name="four" onclick="calculatescore(this.form)">
+        Hardly ever <br>
+        <input type="radio" value="2" name="four" onclick="calculatescore(this.form)">
+        Yes, sometimes <br>
+        <input type="radio" value="3" name="four" onclick="calculatescore(this.form)">
+        Yes, very often <br>
+    &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59%"><font face="arial"><b>5. I have felt scared or panicky for no very good reason
+        </b> <br>
+        <input type="radio" value="3" name="five" onclick="calculatescore(this.form)">
+        Yes, quite a lot <br>
+        <input type="radio" value="2" name="five" onclick="calculatescore(this.form)">
+        Yes, sometimes <br>
+        <input type="radio" value="1" name="five" onclick="calculatescore(this.form)">
+        No, not much <br>
+        <input type="radio" value="0" name="five" onclick="calculatescore(this.form)">
+        No, not at all <br>
+    &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59%"><font face="arial"><b>6. Things have been getting on top of me
+        </b> <br>
+         <input type="radio" value="3" name="six" onclick="calculatescore(this.form)">
+        Yes, most of the time I haven't been able to cope at all. <br>
+         <input type="radio" value="2" name="six" onclick="calculatescore(this.form)">
+        Yes, sometimes I haven't been coping as well as usual <br>
+         <input type="radio" value="1" name="six" onclick="calculatescore(this.form)">
+        No, most of the time I have coped quite well.<br>
+         <input type="radio" value="0" name="six" onclick="calculatescore(this.form)">
+        No, I have been coping as well as ever.<br>
+    &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59%"><font face="arial"><b>7. I have been so unhappy that I have had difficulty 
+        sleeping </b> <br>
+          <input type="radio" value="3" name="seven" onclick="calculatescore(this.form)">
+        Yes, most of the time <br>
+          <input type="radio" value="2" name="seven" onclick="calculatescore(this.form)">
+        Yes, sometimes <br>
+          <input type="radio" value="1" name="seven" onclick="calculatescore(this.form)">
+        Not very often <br>
+          <input type="radio" value="0" name="seven" onclick="calculatescore(this.form)">
+        No, not at all<br>
+    &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59%"><font face="arial"><b>8. I have felt sad or miserable </b> <br>
+          <input type="radio" value="3" name="eight" onclick="calculatescore(this.form)">
+        Yes, most of the time <br>
+          <input type="radio" value="2" name="eight" onclick="calculatescore(this.form)">
+        Yes, quite often <br>
+          <input type="radio" value="1" name="eight" onclick="calculatescore(this.form)">
+        Not very often <br>
+          <input type="radio" value="0" name="eight" onclick="calculatescore(this.form)">
+        No, not at all <br>
+    &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59%"><font face="arial"><b>9. I have been so unhappy that I have been crying</b><br>
+          <input type="radio" value="3" name="nine" onclick="calculatescore(this.form)">
+        Yes, most of the time <br>
+          <input type="radio" value="2" name="nine" onclick="calculatescore(this.form)">
+        Yes, quite often <br>
+          <input type="radio" value="1" name="nine" onclick="calculatescore(this.form)">
+        Only occasionally <br>
+          <input type="radio" value="0" name="nine" onclick="calculatescore(this.form)">
+        No, never<br>
+    &nbsp;</td>
+      </tr>
+      <tr>
+        <td width="59%"><font face="arial"><b>10. The thought of harming myself has occurred to me
+        </b> <br>
+         <input type="radio" value="3" name="ten" onclick="calculatescore(this.form)">
+        Yes, quite often <br>
+         <input type="radio" value="2" name="ten" onclick="calculatescore(this.form)">
+        Sometimes <br>
+         <input type="radio" value="1" name="ten" onclick="calculatescore(this.form)">
+        Hardly ever <br>
+         <input type="radio" value="0" name="ten" onclick="calculatescore(this.form)">
+        Never</td>
+      </tr>
+     
+      <tr>
+        <td width="59%"><font face="arial"><b>TOTAL SCORE&nbsp; <input size="8" name="TOTAL"><align="center"><font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="reset" value="Reset" name="B2"></font></b></td>
+      </tr>
+     
+    </table>
+
+    
+    
+    </form>
+    <h2>Scoring</h2>
+    <ul><li>Maximum score: 30 
+    </li>
+    <li>Possible Depression: 10 or greater
+    </li>
+    <li>Always look at item 10 (suicidal thoughts)
+    </li></ul>
+</body>
+</html>

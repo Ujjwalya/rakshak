@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malnutrition Assessment Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        ol {
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            margin: 20px auto;
+            display: block;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Malnutrition Assessment Survey</h1>
+    <p>Instructions to ensure accurate responses and understanding of the purpose of the assessment:</p>
+    <ol>
+        <li>The survey aims to assess nutritional status and identify individuals who may be at risk of malnutrition.</li>
+        <li>All the items must be completed.</li>
+        <li>The responses will remain confidential and will only be used for research or assessment purposes.</li>
+        <li>Your participation is voluntary, and participants have the right to withdraw at any time without consequence.</li>
+    </ol>
+    <form id="malnutritionForm" action="submit.php" method="post" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <th>Question</th>
+                <th>Response</th>
+            </tr>
+            <tr>
+                <td>1. Have you experienced unexplained weight loss recently?</td>
+                <td>
+                    <input type="radio" value="0" name="one" id="one" required> As much as I always could <br>
+                    <input type="radio" value="1" name="one"> Not quite so much now <br>
+                    <input type="radio" value="2" name="one"> Definitely not so much now <br>
+                    <input type="radio" value="3" name="one"> Not at all
+                </td>
+            </tr>
+            <tr>
+                <td>2. Do you frequently feel weak or fatigued, even with adequate rest?</td>
+                <td>
+                    <input type="radio" value="0" name="two" id="two" required> As much as I ever did <br>
+                    <input type="radio" value="1" name="two"> Rather less than I used to <br>
+                    <input type="radio" value="2" name="two"> Definitely less than I used to <br>
+                    <input type="radio" value="3" name="two"> Hardly at all
+                </td>
+            </tr>
+            <tr>
+                <td>3. Have you noticed any changes in your nails, such as brittleness or ridges?</td>
+                <td>
+                    <input type="radio" value="3" name="three" id="three" required> Yes, most of the time <br>
+                    <input type="radio" value="2" name="three"> Yes, some of the time <br>
+                    <input type="radio" value="1" name="three"> Not very often <br>
+                    <input type="radio" value="0" name="three"> No, never
+                </td>
+            </tr>
+            <tr>
+                <td>4. Have you experienced swelling in your extremities (such as hands, feet, or ankles)?</td>
+                <td>
+                    <input type="radio" value="0" name="four" id="four" required> No, not at all <br>
+                    <input type="radio" value="1" name="four"> Hardly ever <br>
+                    <input type="radio" value="2" name="four"> Yes, sometimes <br>
+                    <input type="radio" value="3" name="four"> Yes, very often
+                </td>
+            </tr>
+            <tr>
+                <td>5. Do you often feel dizzy or lightheaded, especially when standing up?</td>
+                <td>
+                    <input type="radio" value="3" name="five" id="five" required> Yes, quite a lot <br>
+                    <input type="radio" value="2" name="five"> Yes, sometimes <br>
+                    <input type="radio" value="1" name="five"> No, not much <br>
+                    <input type="radio" value="0" name="five"> No, not at all
+                </td>
+            </tr>
+            <tr>
+                <td>6. Have you noticed any changes in your appetite, such as decreased hunger or increased cravings?</td>
+                <td>
+                    <input type="radio" value="3" name="six" id="six" required> Yes, most of the time I haven't been able to cope at all. <br>
+                    <input type="radio" value="2" name="six"> Yes, sometimes I haven't been coping as well as usual <br>
+                    <input type="radio" value="1" name="six                    "> No, most of the time I have coped quite well.<br>
+                    <input type="radio" value="0" name="six"> No, I have been coping as well as ever.
+                </td>
+            </tr>
+            <tr>
+                <td>7. Do you often experience gastrointestinal symptoms such as bloating, gas, constipation, or diarrhea?</td>
+                <td>
+                    <input type="radio" value="3" name="seven" id="seven" required> Yes, most of the time <br>
+                    <input type="radio" value="2" name="seven"> Yes, sometimes <br>
+                    <input type="radio" value="1" name="seven"> Not very often <br>
+                    <input type="radio" value="0" name="seven"> No, not at all
+                </td>
+            </tr>
+            <tr>
+                <td>8. Have you been diagnosed with any nutrient deficiencies (e.g., vitamin D deficiency, iron deficiency anemia)?</td>
+                <td>
+                    <input type="radio" value="3" name="eight" id="eight" required> Yes, most of the time <br>
+                    <input type="radio" value="2" name="eight"> Yes, quite often <br>
+                    <input type="radio" value="1" name="eight"> Not very often <br>
+                    <input type="radio" value="0" name="eight"> No, not at all
+                </td>
+            </tr>
+            <tr>
+                <td>9. Do you experience frequent bone pain or fractures?</td>
+                <td>
+                    <input type="radio" value="3" name="nine" id="nine" required> Yes, most of the time <br>
+                    <input type="radio" value="2" name="nine"> Yes, quite often <br>
+                    <input type="radio" value="1" name="nine"> Only occasionally <br>
+                    <input type="radio" value="0" name="nine"> No, never
+                </td>
+            </tr>
+            <tr>
+                <td>10. Have you been diagnosed with any chronic health conditions that may affect your nutritional status?</td>
+                <td>
+                    <input type="radio" value="3" name="ten" id="ten" required> Yes, quite often <br>
+                    <input type="radio" value="2" name="ten"> Sometimes <br>
+                    <input type="radio" value="1" name="ten"> Hardly ever <br>
+                    <input type="radio" value="0" name="ten"> Never
+                </td>
+            </tr>
+        </table>
+        <input type="submit" name="Submit Test" value="Submit" formaction="result.html">
+    </form>
+</body>
+</html>
+

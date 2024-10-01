@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylee.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>SELF MEDICOP | Login</title>
+    <style>
+        body {
+            background-color: #F0F0F0;
+        }
+        .box {
+            width: 500px;
+            margin: auto;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .top h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        header {
+            font-size: 18px;
+            margin: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-field {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .input {
+            width: 100%;
+            padding: 10px 40px 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #F0F0F0;
+            box-sizing: border-box;
+        }
+        .input:focus {
+            outline: none;
+            background-color: #FFFFFF;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+        }
+        .input:focus + .bx {
+            color: #3366FF;
+        }
+        .bx {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            color: #999999;
+        }
+        .submit {
+            background-color: #4CAF50;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .submit:hover {
+            background-color: #4CAF50;
+        }
+        .one-col {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .two {
+            font-size: 14px;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="container">
+        <div class="top">
+            <h2>Forgot Password</h2>
+          
+        </div>
+
+        <form action="forgot_password.php" method="POST">
+    
+            <div class="input-field">
+                <input type="text" class="input" placeholder="Enter your email or username" name="email_or_username" required>
+                <i class='bx bx-user' ></i>
+            </div>
+        
+            <div class="input-field">
+                <input type="submit" class="submit" value="Submit" name="submit">
+            </div>
+        
+        </form>
+    </div>
+</div> 
+</body>
+</html>

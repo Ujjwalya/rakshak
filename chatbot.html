@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Medical Website</title>
+  <style>
+    /* Style the chat popup */
+    #myChatPopup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 1px solid #dcdcdc;
+      border-radius: 5px 5px 0 0;
+      width: 300px;
+    }
+
+    /* Style the chat history */
+    #chatHistory {
+      height: 200px;
+      overflow-y: scroll;
+    }
+
+    /* Style the chat input field */
+    #chatInput {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+  <link rel="stylesheet" href="chatb">
+</head>
+<body>
+
+  <div class="chat-popup" id="myChatPopup">
+  <div class="chat-container">
+    <div class="header">
+      <h4>Medical Chatbot</h4>
+      <button class="closebtn" onclick="closeChat()">×</button>
+    </div>
+    <div class="chat-history" id="chatHistory">
+      <p>Hi, how can I assist you today?</p>
+    </div>
+    <div class="chat-box">
+      <input type="text" placeholder="Type your message here..." id="chatInput">
+      <button onclick="sendChat()">Send</button>
+    </div>
+  </div>
+</div>
+
+  <button onclick="openChat()">Chat</button>
+
+ 
+  <div id="myChatPopup">
+    <div id="chatHistory"></div>
+    <input type="text" id="chatInput" placeholder="Type your message here">
+    <button onclick="sendChat()">Send</button>
+    <button onclick="closeChat()">Close</button>
+  </div>
+
+  
+var chatPopup = document.getElementById("myChatPopup");
+var chatInput = document.getElementById("chatInput");
+var chatHistory = document.getElementById("chatHistory");
+
+function openChat() {
+  chatPopup.style.display = "block";
+  var greeting = "Hello, how can I assist you today?";
+  var newMessage = document.createElement("p");
+  newMessage.innerText = greeting;
+  chatHistory.appendChild(newMessage);
+}
+
+// Function to close the chat popup
+function closeChat() {
+  chatPopup.style.display = "none";
+}
+
+
+function sendChat() {
+  var message = chatInput.value;
+  var newMessage = document.createElement("p");
+
+  if (message.toLowerCase().includes("how to reach you")) {
+    var response = "You can reach us by calling our customer service line at 555-555-5555.";
+  } else if (message.toLowerCase().includes("how to take medicine")) {
+    var response = "Please refer to the instructions on the label of your medication or consult with your doctor or pharmacist.";
+  } else {
+    var response = "I'm sorry, I'm not sure how to help with that. Someone from our site will connect with you shortly.";
+  }
+
+  
+  newMessage.innerText = response;
+  chatHistory.appendChild(newMessage);
+
+  
+  chatInput.value = "";
+}
+
+  <script>
+    // Get the chat popup, chat input field, and chat history
+    var chatPopup = document.getElementById("myChatPopup");
+    var chatInput = document.getElementById("chatInput");
+    var chatHistory = document.getElementById("chatHistory");
+
+    // Function to open the chat popup and greet the user
+    function openChat() {
+      chatPopup.style.display = "block";
+      var greeting = "Hello, how can I assist you today?";
+      var newMessage = document.createElement("p");
+      newMessage.innerText = greeting;
+      chatHistory.appendChild(newMessage);
+    }
+
+    // Function to close the chat popup
+    function closeChat() {
+      chatPopup.style.display = "none";
+    }
+
+    // Function to send a chat message and receive a response
+    function sendChat() {
+      var message = chatInput.value;
+      var newMessage = document.createElement("p");
+
+      if (message.toLowerCase().includes("how to reach you")) {
+        var response = "You can reach us by calling our customer service line at 555-555-5555.";
+      } else if (message.toLowerCase().includes("how to take medicine")) {
+        var response = "Please refer to the instructions on the label of your medication or consult with your doctor or pharmacist.";
+      } else {
+        var response = "I'm sorry, I'm not sure how to help with that. Someone from our site will connect with you shortly.";
+      }
+
+      // Display the response
+      newMessage.innerText = response;
+      chatHistory.appendChild(newMessage);
+
+      // Clear the chat input field
+      chatInput.value = "";
+    }
+  </script>
+
+</body>
+</html>

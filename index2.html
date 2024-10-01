@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medicine Reminder Checklist</title>
+</head>
+<body>
+	<h1>Medicine Reminder Checklist</h1>
+	<p>Check the boxes next to the medicines you need to take:</p>
+	<form>
+		<input type="checkbox" id="medicine1" name="medicine1" value="medicine1">
+		<label for="medicine1">Medicine 1</label><br>
+		<input type="checkbox" id="medicine2" name="medicine2" value="medicine2">
+		<label for="medicine2">Medicine 2</label><br>
+		<input type="checkbox" id="medicine3" name="medicine3" value="medicine3">
+		<label for="medicine3">Medicine 3</label><br>
+		<input type="checkbox" id="medicine4" name="medicine4" value="medicine4">
+		<label for="medicine4">Medicine 4</label><br><br>
+		<input type="button" value="Submit" onclick="submitForm()">
+	</form>
+	<div id="medicineReminder"></div>
+	<script>
+		function submitForm() {
+			var medicine1 = document.getElementById("medicine1").checked;
+			var medicine2 = document.getElementById("medicine2").checked;
+			var medicine3 = document.getElementById("medicine3").checked;
+			var medicine4 = document.getElementById("medicine4").checked;
+			var reminder = "";
+			
+			if (medicine1) {
+				reminder += "Take Medicine 1<br>";
+			}
+			if (medicine2) {
+				reminder += "Take Medicine 2<br>";
+			}
+			if (medicine3) {
+				reminder += "Take Medicine 3<br>";
+			}
+			if (medicine4) {
+				reminder += "Take Medicine 4<br>";
+			}
+			document.getElementById("medicineReminder").innerHTML = reminder;
+		}
+	</script>
+</body>
+</html>

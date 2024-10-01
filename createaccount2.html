@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylee.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>SELF MEDICOP | Login</title>
+<style>
+        /* body styles */
+body {
+    background-color: #e8e8e8;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-field input[type="text"],
+.input-field input[type="password"],
+.input-field input[type="email"] {
+  padding-left: 40px;
+}
+
+/* container styles */
+.container {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+}
+
+/* top styles */
+.top {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top h2 {
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 20px;
+    display: inline-block;
+    border-bottom: 2px solid #999;
+    padding-bottom: 5px;
+}
+
+header {
+    font-size: 24px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* input field styles */
+.input-field {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-field .input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-field .input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px #999;
+}
+
+.input-field .submit {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-field .submit:hover {
+    background-color: #666;
+}
+
+/* icon styles */
+.bx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: #999;
+    left: 10px;
+}
+
+/* forgot password styles */
+.one-col {
+    text-align: center;
+}
+
+.two {
+    margin-bottom: 20px;
+}
+
+.two label {
+    font-size: 16px;
+    color: #333;
+}
+
+.two label a {
+    color: #333;
+    text-decoration: none;
+}
+
+.two label a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+    
+            <form action="/index.html" >
+            <!-- action="create.php" method="POST" -->
+
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Name" name="name" required>
+                    <i class='bx bx-user' ></i>
+                </div>
+    
+                <div class="input-field">
+                    <input type="email" class="input" placeholder="Email" name="email" required>
+                    <i class='bx bx-mail-send'></i>
+                </div>
+    
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Username" name="username" required>
+                    <i class='bx bx-user' ></i>
+                </div>
+    
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Password" name="password" required>
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+    
+
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Create Account" name="submit">
+                </div>
+    
+            </form>
+    
+            <div class="one-col">
+                <div class="two">
+                    <label><a href="login.html">Already a user?</a></label>
+                </div>
+            </div>
+    
+        </div>
+    </div>    
+</body>
+</html>

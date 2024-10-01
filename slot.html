@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joint Training Session Scheduler</title>
+    <link rel="stylesheet" href="slot.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Joint Training Session Scheduler</h1>
+        <form id="availability-form">
+            <label for="availability">Enter Your Availability:</label>
+            <input type="text" id="availability" placeholder="e.g., Monday 9:00 AM - 12:00 PM">
+            <button type="button" onclick="addAvailability()">Add Availability</button>
+        </form>
+
+        <h2>Availability List:</h2>
+        <ul id="availability-list"></ul>
+
+        <h2>Common Available Slots:</h2>
+        <p id="common-slots"></p>
+    </div>
+    <script src="slot.js"></script>
+</body>
+</html>

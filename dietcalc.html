@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .diet-chart {
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="diet-chart">
+        <h2>Diet Chart</h2>
+        <div class="input-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age">
+        </div>
+        <div class="input-group">
+            <label for="height">Height (cm):</label>
+            <input type="text" id="height">
+        </div>
+        <div class="input-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="text" id="weight">
+        </div>
+        <div class="input-group">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <button class="btn-submit" onclick="calculateDiet()">Calculate</button>
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+<script>
+    function calculateDiet() {
+        // Get input values
+        var age = parseInt(document.getElementById("age").value);
+        var height = parseInt(document.getElementById("height").value);
+        var weight = parseInt(document.getElementById("weight").value);
+        var gender = document.getElementById("gender").value;
+
+        // Calculate diet based on inputs (example calculation)
+        var basalMetabolicRate = calculateBMR(age, height, weight, gender);
+        var dietRecommendation = "Your calculated basal metabolic rate is: " + basalMetabolicRate + " calories per day.";
+
+        // Display result
+        document.getElementById("result").innerHTML = dietRecommendation;
+    }
+
+    function calculateBMR(age, height, weight, gender) {
+        var bmr;
+        if (gender === "male") {
+            bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+        } else {
+            bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+        }
+        return bmr;
+    }
+</script>
+
+</body>
+</html>
